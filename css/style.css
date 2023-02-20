@@ -1,0 +1,704 @@
+@charset "UTF-8" ;
+/* 共通部分 */
+html {
+ font-size: 100%;    
+}
+a {
+ text-decoration: none;    
+}
+img {
+ max-width: 100%;    
+}
+li{
+ list-style: none;  
+}
+*{
+padding: 0;
+margin: 0;    
+}
+
+/* <!--header--> */
+.logo {
+ width: 100%;
+ margin: 0 auto;
+}
+.logo img{
+ position: absolute;
+ top: 0;   
+ width: 100%;
+ height: 45px;
+}
+.logo_tel{
+ margin: 30px auto 5px;
+}
+.logo_tel ul{
+ display: flex;   
+ justify-content: space-between;
+}
+.logo_li img{
+  margin: 28px 15px 5px;
+  width: 90%;   
+}
+.logo_li_tel{
+ margin: 25px 15px;   
+}
+
+/*ハンバーガーメニュー*/
+.btn-burger {
+ cursor: pointer;
+ display: block;
+ width: 56px;
+ height: 60px;
+ position: absolute;
+ top: -10px;
+ right: 10px;
+}
+/*三本線*/
+.icon, .icon:before, .icon:after {
+ position: absolute;
+ top: 0;
+ right: 0;
+ left: 0;
+ bottom: 0;
+ height: 3px; /*線の太さ*/
+ width: 35px; /*線の長さ*/
+ background-color: #fff;
+ border-radius: 2px;
+ display: block;
+ content: '';
+ cursor: pointer;
+ margin: auto;
+}
+/*三本線の間隔*/
+.icon:before {
+ top: 16px;
+}
+.icon:after {
+ top: -25px;
+}
+/*チェックボックス非表示*/
+.nav-toggle {
+ display: none;
+}
+/*アイコンをクリック*/
+.nav-toggle:checked ~ .btn-burger .icon {
+ background: transparent;
+}
+.nav-toggle:checked ~ .btn-burger .icon:before {
+ transform: rotate(-45deg);
+ top: 0;
+}
+.nav-toggle:checked ~ .btn-burger .icon:after {
+ transform: rotate(45deg);
+ top: 0;
+}
+.icon,
+.icon:before,
+.icon:after {
+ transition: all .8s;
+} 
+.nav-list a {
+ display: block;
+ text-decoration: none;
+ color: #fff;
+}
+.nav-list {
+ list-style: none;
+ display: none;
+ margin: 0;
+ padding-left: 20px;
+}
+.nav-list li {
+ margin: 0;
+ padding: 10px;
+}
+.nav-toggle:checked ~ .nav .nav-list {
+ display: block;
+}
+
+/*いちごのテーマパーク*/
+.strawberry_top {
+ border-top: solid 3px red;
+} 
+.strawberry_top img{
+ width: 100%;
+ height: 100%;
+}
+.three_strawberries{
+ margin-top: -5px;
+}
+.three_strawberries img{
+ width: 100%;
+ height: 100%;    
+}
+
+/* 株式会社いちご　開園のお知らせ */
+.open_div{
+ background-color: #ffeaf4;  
+ margin-top: -10px; 
+}
+.open{
+ text-align: center;    
+}
+.open img{
+ width: 70%;
+ height: 50%;
+ margin-top: -105px;    
+}
+.reserve{
+ text-align: center;   
+}
+.reserve img{
+ width: 55%;
+ height: 50%; 
+ margin-top: 50px;   
+}
+
+/* 新着イベント・お知らせ情報 */
+.informaton_section{
+  background-color: #ffeaf4;   
+ }
+.event{
+ text-align: center;    
+}
+.event img{
+ width: 60%;
+ height: 50%;    
+ margin-top: 60px;
+}
+.informaton_div{
+ margin: 50px auto; 
+}
+.informaton_ul{
+ background-color: #fff; 
+ width: 67%;
+ margin: 50px auto;
+ padding: 20px 10px;
+ text-align: -webkit-center;
+}
+.informaton_ul li {
+ display:flex;
+ justify-content:flex-start;
+ border-bottom: dotted 2px #c8c8c8;
+ margin-bottom: 20px;
+ width: 80%;
+}
+.informaton_ul li .data {
+ min-width:9em;
+}
+.data{
+ margin-top: 10px;
+}
+.title{
+ margin: 10px 25px;
+ padding-bottom: 10px;    
+}
+.title a{
+ color: #444; 
+}
+.list_div{
+ text-align: center;
+}
+.list_div h3 a{
+ display: inline-block;   
+ border: solid 2px green;
+ border-radius: 5px;
+ color: #444;
+ width: 150px;
+ padding: 13px;
+ margin-bottom: 50px;
+}
+
+/* 農園情報・入園料金案内 */
+.informaton_s{
+ display: flex;
+}
+.farm{
+ width: 50%;
+ text-align: center;
+ margin: 15px auto;
+}
+.admisson{
+ width: 50%; 
+ text-align: center;
+ margin: 15px auto;
+}
+
+/* イベント情報〜近隣施設のご案内 */
+.event_div{
+ text-align: center; 
+}
+.item_a{
+ display: -webkit-inline-box; 
+ width: 90%;
+}
+.item_a img{
+ width: 48%;  
+}
+.event_a{
+ width: 50%;
+ display: flex;
+ margin: 15px 10px;
+}
+.event_a a img{
+ width: 95%;  
+}
+.faq_a{
+  width: 50%;
+  display: flex;
+  margin: 15px 10px;
+ }  
+.faq_a img {
+ width: 48%;  
+} 
+.faq_a a img{
+ width: 95%; 
+}
+.item_b{
+ display: -webkit-inline-box; 
+ width: 90%;
+}
+.item_b img{
+  width: 48%;  
+ }
+.souvenir_a{
+ width: 50%;
+ display: flex;
+ margin: 15px 10px;
+}
+.souvenir_a a img{
+ width: 100%; 
+}
+.nearby_a{
+  width: 50%;
+  display: flex;
+  margin: 15px 10px;
+ }  
+.nearby_a img{
+ width: 48%;  
+} 
+.nearby_a a img{
+ width: 100%; 
+}
+
+/* 株式会社いちごの魅力を発信！*/
+.you_tube_div{
+ border: solid 5px green;    
+ background-color: #ffeaf4;
+}
+.you_tube{
+ display: grid;
+ text-align: center;
+ margin: 30px auto;
+}
+.you_tube img{
+ width: 12%;  
+ margin: 30px auto;
+ border-radius: 25px;
+}
+.attractive_introduction{
+ margin: 5px;
+}
+.attractive_introduction_a{
+font-size: 38px;
+font-weight: bold;
+color: #006633;
+}
+.attractive_introduction_b{
+ margin: 5px; 
+}
+.video{
+ text-align: center; 
+}
+.video video{
+ width: 85%;  
+}
+.pesticide_free{
+ text-align: center;   
+ font-size: 20px;
+ margin: 35px auto;
+}
+
+/* ◯◯最大のいちご狩り！ハウス◯◯棟 */
+.strawberry{
+ text-align: center;   
+ margin: 35px;
+}   
+.detail{
+ border: solid 3px darkseagreen;
+ display: flex;  
+ width: 75%;
+ margin: 25px auto; 
+}
+.wrap{
+ width: 40%;
+ margin: 31px;
+}
+.wrap .wrap_ul{
+ text-align: right;   
+}
+.wrap_ul{
+ font-size: x-large;   
+}
+.right{
+ border-left: dashed 1px gainsboro; 
+ margin: 20px 55px;
+} 
+.right_tel{
+ text-align: center;  
+ margin-left: 30px; 
+}
+
+/* 主催・後援 */
+.company_div{
+ display: flex;   
+ justify-content: center;
+ background-color:#b2ffb2;  
+ padding-top: 15px;
+}
+.company{
+ width: 20%;
+}
+.head{
+ font-size: 16px;   
+}
+.name{
+ padding: 5px 10px;   
+}
+.txt{
+ padding: 5px 10px; 
+ font-size: 14px;
+}
+.txt a{
+ color: #444;    
+}
+.company_ab{ 
+ width: 20%; 
+}
+.block_a{
+ margin: 26px;
+}
+
+/* 日本最大のおでかけ情報メディア */
+.media{
+ background-color:#b2ffb2;  
+ padding: 35px;
+ margin-top: -24px;  
+}
+.media .media_ul{ 
+ display:flex;
+ justify-content:center;
+}    
+.media_ul li{
+ margin: 0 55px;
+}
+
+/* footer */
+#footer{
+ font-size: 13px;    
+ background-color: green;
+ text-align: center;
+ padding: 13px;
+}
+#footer .footer_ul{
+ display: flex;   
+ justify-content:space-between;  
+ margin-bottom: 5px;
+}
+#footer .footer_ul li{ 
+ color: #fff;
+}
+#footer .footer_ul li a{
+ margin: 0 10px;  
+ color: #fff;
+}
+
+
+/* ハンバーガーメニュー*/
+@media screen and (min-width: 788px) {
+.btn-burger {
+ display: none; 
+ }
+.nav-toggle:checked ~ .nav .nav-list {
+ display: none;
+ }
+.nav {
+ height: 75px;       
+ }
+.nav-list {
+ display: flex;
+ justify-content: center;
+ height: 75px;
+ align-items: center;
+ }
+.nav-list li:not(:last-child) {
+ border-right: 1px solid #fff;
+ }
+}
+
+
+@media screen and (max-width: 1120px) {
+/* 主催・後援 */
+.block{
+ font-size: small;   
+ }
+.head{
+ font-size: 14px;   
+ }
+.name{
+ padding: 4px 8px;   
+ }
+.txt{
+ font-size: smaller;   
+ }
+.company_ab{
+ font-size: small;   
+ }
+.block_a{
+ margin: 23px 8px;   
+ }
+}
+
+@media screen and (max-width: 837px) {
+/*株式会社いちご 開園のお知らせ */
+.open img{
+ margin-top: -55px;   
+ }
+.reserve img{
+ margin-top: 30px;   
+ }
+
+/* 新着イベント・お知らせ情報 */
+.event img{
+ margin-top: 30px;   
+ }
+.informaton_ul{
+ width: 55%;    
+ }
+.informaton_ul li {
+ display: block;   
+ font-size: 15px;
+ }
+.data{
+ text-align: start;   
+ margin-left: 23px;
+ }
+.title{
+ display: -webkit-box;
+ }
+}
+
+@media screen and (max-width: 788px) {
+/* 農園情報・入園料金案内 */
+.informaton_s {
+ display:block;
+ }
+.farm{
+ width: 100%;  
+ }
+.admisson{
+ width: 100%;  
+}
+/* イベント情報〜近隣施設のご案内 */
+.event_a{
+ width: 100%;
+ display: list-item;  
+}
+.event_a img{
+ width: 50%; 
+}
+.faq_a{
+ width: 100%;
+ display: grid;    
+}
+.item_a{
+display: flex;  
+width: 100%;
+}
+.item_a img{
+ width: 95%; 
+}
+.item_b{
+ display: flex; 
+ width: 100%; 
+}
+.item_b img{
+ width: 95%; 
+}
+.souvenir_a{
+ width: 100%;
+ display: list-item;  
+}
+.souvenir_a img{
+ width: 95%;  
+}
+.nearby_a{
+ width: 100%;
+ display: grid;    
+}
+
+/* 株式会社いちごの魅力発信！ */
+.you_tube{
+ margin: 20px auto;    
+ }
+.you_tube img{
+ width: 15%; 
+ margin: 25px auto;   
+ }
+.attractive_introduction_a{
+ font-size: 28px;   
+ }
+.attractive_introduction_b{
+ font-size: 18px;  
+ }
+.pesticide_free{
+ font-size: 16px;   
+ }
+  
+/* ◯◯最大のいちご狩り！ハウス◯◯棟 */
+.detail{
+ display: block;   
+ text-align: -webkit-center;
+ margin: 20px auto;
+ width: 55%;
+ }
+.wrap_ul{
+ font-size: 16px;   
+ }
+.wrap .wrap_ul{
+ margin-right: 30px; 
+ }
+.right{
+ border-left: none;   
+ border-top: dashed 1px gainsboro;
+ }
+.right_tel{
+ margin-top: 10px;  
+ margin-right: 25px;
+ }
+
+/* 主催・後援 */
+.company_div{
+ display: block;  
+ text-align: center; 
+ }
+.company{
+ width: 100%;   
+ margin: 15px auto;
+ }
+.head{
+ margin-bottom: 10px;   
+ } 
+.company_ab{
+ width: 100%;   
+ }
+  
+/* 日本最大のおでかけ情報メディア */
+.media .media_ul{
+ display: block; 
+ text-align: center;  
+ }
+.media_ul li{
+ margin-bottom: 20px;
+ }
+
+ /* footer */
+#footer {
+ font-size: 10px;    
+ }
+}
+  
+@media screen and (max-width: 650px) {
+/* ◯◯最大のいちご狩り！ハウス◯◯棟 */
+.wrap .wrap_ul{
+margin-right: 10px;
+ } 
+}     
+
+@media screen and (max-width: 637px) {
+/* ◯◯最大のいちご狩り！ハウス◯◯棟 */
+.wrap_ul{
+ font-size: 14px;   
+ }
+.wrap .wrap_ul{
+ margin-right: 30px; 
+ } 
+}
+
+@media screen and (max-width: 600px) {
+/* 新着イベント・お知らせ情報 */
+.informaton_div{
+ margin-top: -30px;   
+ }
+.informaton_ul{
+ width: 55%;    
+ }
+.informaton_ul li {
+ font-size: 12px;
+ }    
+.title{
+margin-right: 18px;
+ }   
+.list_div h3 a{
+ width: 100px;    
+ font-size: 15px;
+ margin-top: -20px;
+ } 
+
+/*株式会社いちごの魅力発信!*/
+.pesticide_free{
+ font-size: 13px;  
+ }
+
+/* ◯◯最大のいちご狩り！ハウス◯◯棟 */
+.wrap_ul{
+ width: 84%;
+ font-size: 12px;   
+ margin: -6px auto;
+ }
+
+/* footer */
+#footer .footer_ul{
+ display: block;    
+ }
+#footer li{
+ margin-bottom: 10px;  
+ height: 15px;  
+ }
+}
+
+@media screen and (max-width: 518px) {
+/* ◯◯最大のいちご狩り！ハウス◯◯棟 */
+.wrap_ul{
+ width: 88%;
+ margin: -5px auto;
+ font-size: 10px;
+ }
+.left{
+ font-size: 10px;
+ }
+.right_tel{
+ width: 130%;
+ margin: 15px -23px;
+ }
+/*株式会社いちごの魅力発信*/
+.attractive_introduction_a{
+ font-size: 25px; 
+ }
+.attractive_introduction_b{
+ font-size: 15px;  
+ }
+}
+
+@media screen and (max-width: 464px) {
+/* 株式会社いちごの魅力発信！ */ 
+.attractive_introduction_a{
+ font-size: 23px; 
+ }
+.attractive_introduction_b{
+ font-size: 12px;  
+ }
+.pesticide_free{
+ font-size: 10px;  
+ } 
+}
